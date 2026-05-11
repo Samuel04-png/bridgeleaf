@@ -17,7 +17,7 @@ npm run build
 
 ## GitHub Pages
 
-The repository includes `.github/workflows/deploy.yml` to build and deploy `dist` to GitHub Pages from the `main` branch. The Vite base path is relative, so the build can work on GitHub Pages and on a custom domain.
+The repository includes `.github/workflows/deploy.yml` to build from `main` and publish the production `dist` folder to the `gh-pages` branch. The Vite base path is relative, so the build can work on GitHub Pages and on a custom domain.
 
 The `public/CNAME` file is set to:
 
@@ -26,6 +26,13 @@ bridgeleafequity.com
 ```
 
 Update that file if the final custom domain changes.
+
+If the repository has not had GitHub Pages enabled before, open **Settings > Pages** in GitHub and set:
+
+- Source: Deploy from a branch
+- Branch: `gh-pages`
+- Folder: `/ (root)`
+- Custom domain: `bridgeleafequity.com`
 
 ## Image Placeholders
 
