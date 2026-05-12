@@ -11,8 +11,8 @@ export const navigation = [
 export const stats = [
   "Zambia-Based",
   "Multi-Sector Portfolio",
-  "Strategic Acquisitions",
-  "Operational Oversight",
+  "Acquisition-Led Growth",
+  "Group-Level Oversight",
 ];
 
 export const whatWeDo = [
@@ -138,16 +138,16 @@ export const boardRoles = [
 
 export const approaches = [
   {
-    title: "Acquisitions",
-    body: "Identifying and acquiring strategic businesses with growth potential.",
+    title: "Deal Origination",
+    body: "Sourcing and evaluating businesses that fit the Group's long-term mandate.",
   },
   {
-    title: "Business Rescue & Turnaround",
-    body: "Providing capital and management support to restructure underperforming businesses.",
+    title: "Turnaround Mandates",
+    body: "Stabilizing stressed businesses through recapitalization, governance, and operating discipline.",
   },
   {
-    title: "Equity Investments",
-    body: "Taking equity positions in promising ventures.",
+    title: "Growth Equity Positions",
+    body: "Backing ventures where strategic ownership can accelerate durable enterprise value.",
   },
   {
     title: "Capital Markets Participation",

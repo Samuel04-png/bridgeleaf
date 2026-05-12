@@ -193,7 +193,7 @@ export default function App() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <SectionHeading
               number="02"
-              eyebrow="What We Do"
+              eyebrow="Active Holding Company"
               title="What We Do"
               copy="Bridge Leaf operates as an active holding and investment company, combining capital, management discipline, and strategic oversight to create long-term value."
             />
@@ -210,7 +210,7 @@ export default function App() {
             <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
               <SectionHeading
                 number="03"
-                eyebrow="Investment Focus"
+                eyebrow="Sector Mandate"
                 title="Investment Focus"
                 copy="The Group invests across sectors that support trade, movement, energy, infrastructure, and economic growth."
               />
@@ -228,7 +228,7 @@ export default function App() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <SectionHeading
               number="04"
-              eyebrow="Our Portfolio"
+              eyebrow="Portfolio Companies"
               title="Our Portfolio"
               copy="Bridge Leaf currently holds and manages investments in independent operating companies, each supported by group-level strategic oversight and disciplined governance."
               light
@@ -268,23 +268,6 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section bg-white" aria-labelledby="governance-preview-title">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-            <div>
-              <SectionHeading
-                number="06"
-                eyebrow="Governance Preview"
-                title="Governed with Discipline. Managed for Growth."
-                copy="Bridge Leaf operates under a robust governance framework designed to ensure accountability, strategic oversight, and operational efficiency across all subsidiaries."
-              />
-              <div className="mt-8">
-                <AnchorButton href="#governance">View Governance</AnchorButton>
-              </div>
-            </div>
-            <GovernanceDiagram />
-          </div>
-        </section>
-
         <section className="cta-band" aria-labelledby="partners-cta-title">
           <div className="mx-auto grid max-w-7xl items-center gap-8 px-5 py-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8">
             <div>
@@ -305,7 +288,7 @@ export default function App() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
               <SectionHeading
-                number="07"
+                number="06"
                 eyebrow="About"
                 title="Building Value Across Emerging African Markets"
                 copy="Bridge Leaf combines financial expertise, strategic acquisitions, and operational excellence to build resilient businesses in key sectors. The company focuses on identifying undervalued or growth-stage businesses and unlocking value through structured investment and disciplined management."
@@ -326,7 +309,7 @@ export default function App() {
         <section id="governance" className="section bg-white" aria-labelledby="governance-title">
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <SectionHeading
-              number="08"
+              number="07"
               eyebrow="Structure & Governance"
               title="Governed with Discipline. Managed for Growth."
               copy="Bridge Leaf Equity Holdings Ltd operates under a robust corporate governance framework designed to ensure accountability, strategic oversight, and operational efficiency across all its subsidiaries."
@@ -369,7 +352,7 @@ export default function App() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
               <SectionHeading
-                number="09"
+                number="08"
                 eyebrow="Investment Strategy"
                 title="Strategic Capital. Operational Discipline. Sustainable Returns."
                 copy="Bridge Leaf evaluates opportunities through a disciplined investment lens, pairing capital with governance, reporting, and hands-on operational oversight."
@@ -389,8 +372,9 @@ export default function App() {
               ))}
             </div>
 
-            <div className="mt-12 rounded-none border border-white/10 bg-white/[0.03] p-5 sm:p-8">
-              <ValueCreationModel compact />
+            <div className="strategy-strip">
+              <span>Investment screen</span>
+              <p>Mandate fit, control rights, capital need, operational upside, governance readiness, and market expansion potential.</p>
             </div>
           </div>
         </section>
@@ -399,7 +383,7 @@ export default function App() {
           <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
               <SectionHeading
-                number="10"
+                number="09"
                 eyebrow="Partners"
                 title="Partnering With Bridge Leaf"
                 copy="Bridge Leaf seeks to partner with business owners, investors, strategic partners, and acquisition opportunities aligned with its mandate."
@@ -421,7 +405,7 @@ export default function App() {
             <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
               <div>
                 <SectionHeading
-                  number="11"
+                  number="10"
                   eyebrow="Contact"
                   title="Contact Bridge Leaf Equity Holdings Ltd"
                   copy="For investment opportunities, strategic partnerships, portfolio inquiries, or business rescue discussions, contact the Bridge Leaf head office in Lusaka."

@@ -537,6 +537,18 @@ body {
     @apply text-2xl font-black leading-tight text-white sm:text-3xl;
   }
 
+  .strategy-strip {
+    @apply mt-12 grid gap-4 border border-white/10 bg-white/[0.04] p-6 sm:grid-cols-[220px_1fr] sm:items-center;
+  }
+
+  .strategy-strip span {
+    @apply text-xs font-black uppercase tracking-[0.22em] text-red;
+  }
+
+  .strategy-strip p {
+    @apply text-base font-semibold leading-7 text-white/75;
+  }
+
   .list-panel {
     @apply border border-slate-200 bg-soft p-6;
   }
