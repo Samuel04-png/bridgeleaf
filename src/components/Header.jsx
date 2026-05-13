@@ -1,22 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navigation } from "../data/siteData";
 
 const logoSrc = `${import.meta.env.BASE_URL}assets/bridgeleaf-logo.png`;
+const headerOffset = 96;
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("#home");
+  const lockedActive = useRef(null);
+  const unlockTimer = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 24);
+
+      if (lockedActive.current) {
+        const lockedSection = document.querySelector(lockedActive.current);
+
+        if (lockedSection) {
+          const distanceFromAnchor = Math.abs(lockedSection.getBoundingClientRect().top - headerOffset);
+
+          if (distanceFromAnchor > 32) {
+            return;
+          }
+        }
+
+        lockedActive.current = null;
+      }
+
       const sections = navigation.map((item) => document.querySelector(item.href)).filter(Boolean);
       let current = sections[0];
 
       for (const section of sections) {
-        if (section.getBoundingClientRect().top <= 120) {
+        if (section.getBoundingClientRect().top <= headerOffset + 24) {
           current = section;
         }
       }
@@ -28,7 +46,10 @@ export default function Header() {
 
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.clearTimeout(unlockTimer.current);
+    };
   }, []);
 
   const closeMenu = () => setOpen(false);
@@ -38,9 +59,17 @@ export default function Header() {
     const target = document.querySelector(href);
 
     if (target) {
+      lockedActive.current = href;
+      window.clearTimeout(unlockTimer.current);
       setActive(href);
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
       window.history.pushState(null, "", href);
+
+      const top = Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerOffset);
+      window.scrollTo({ top, behavior: "smooth" });
+
+      unlockTimer.current = window.setTimeout(() => {
+        lockedActive.current = null;
+      }, 1200);
     }
 
     closeMenu();
@@ -100,7 +129,7 @@ export default function Header() {
               key={item.href}
               href={item.href}
               onClick={(event) => handleNavClick(event, item.href)}
-              className={`mobile-link ${active === item.href ? "bg-soft text-red" : "text-navy"}`}
+              className={`mobile-link ${active === item.href ? "border-red bg-soft text-red" : "text-navy"}`}
             >
               {item.label}
             </a>
