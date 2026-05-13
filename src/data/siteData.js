@@ -1,9 +1,9 @@
 export const navigation = [
   { label: "Home", href: "#home" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
   { label: "Governance", href: "#governance" },
   { label: "Investment Strategy", href: "#strategy" },
-  { label: "Portfolio", href: "#portfolio" },
   { label: "Partners", href: "#partners" },
   { label: "Contact", href: "#contact" },
 ];
@@ -88,7 +88,7 @@ export const portfolio = [
     description: "A portfolio company focused on commodity and energy trading across key markets.",
     image: imageSources.commodities,
     alt: "Stacks of copper sheets representing commodity trading and mineral markets",
-    href: "#contact",
+    href: "http://www.afrotradecorp.com",
   },
 ];
 

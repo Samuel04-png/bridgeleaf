@@ -33,6 +33,19 @@ export default function Header() {
 
   const closeMenu = () => setOpen(false);
 
+  const handleNavClick = (event, href) => {
+    event.preventDefault();
+    const target = document.querySelector(href);
+
+    if (target) {
+      setActive(href);
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.pushState(null, "", href);
+    }
+
+    closeMenu();
+  };
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
@@ -55,6 +68,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
+              onClick={(event) => handleNavClick(event, item.href)}
               className={`nav-link ${active === item.href ? "text-red after:scale-x-100" : "text-slate-700 after:scale-x-0"}`}
             >
               {item.label}
@@ -85,13 +99,13 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              onClick={closeMenu}
+              onClick={(event) => handleNavClick(event, item.href)}
               className={`mobile-link ${active === item.href ? "bg-soft text-red" : "text-navy"}`}
             >
               {item.label}
             </a>
           ))}
-          <a href="#contact" onClick={closeMenu} className="btn-primary mt-3 justify-center">
+          <a href="#contact" onClick={(event) => handleNavClick(event, "#contact")} className="btn-primary mt-3 justify-center">
             Invest With Us
           </a>
         </nav>

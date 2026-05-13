@@ -28,7 +28,7 @@ export default function PortfolioCard({ company, index }) {
           className="portfolio-link"
           href={company.href}
           target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noreferrer" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
         >
           Visit Website
           <ExternalLink size={16} aria-hidden="true" />

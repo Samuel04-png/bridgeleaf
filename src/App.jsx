@@ -168,10 +168,7 @@ export default function App() {
             </div>
             <div className="space-y-8">
               <p className="lead-copy">
-                Bridge Leaf Equity Holdings Ltd is an investment holding and management company focused on identifying,
-                acquiring, developing, and managing businesses across high-potential African markets. The Group supports
-                both growth-stage and underperforming businesses through strategic capital deployment, governance
-                discipline, and active portfolio oversight.
+                Bridge Leaf combines financial expertise, strategic acquisitions, and operational excellence to build resilient businesses in key sectors.
               </p>
               <div className="investment-badge">
                 <div className="badge-grid" aria-hidden="true">
